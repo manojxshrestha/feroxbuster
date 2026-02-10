@@ -166,8 +166,12 @@ insecure = true
 # Target scope - domains to scan (auto-includes subdomains)
 # scope = ["example.com"]
 
-# URL denylist - paths to skip
-url_denylist = ["/logout", "/signout", "/exit"]
+# Use regex instead → avoids the strict URL parser that requires absolute URLs
+regex_denylist = [
+    "^/logout",
+    "^/signout",
+    "^/exit"
+]
 
 # Regex denylist
 regex_denylist = ["^/logout.*", "^/signout.*"]
