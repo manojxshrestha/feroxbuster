@@ -159,22 +159,8 @@ redirects = true
 # Allow insecure SSL certificates (useful for staging/dev environments)
 insecure = true
 
-# =============================================================================
-# SCOPE & FILTERING
-# =============================================================================
-
-# Target scope - domains to scan (auto-includes subdomains)
-# scope = ["example.com"]
-
-# Use regex instead → avoids the strict URL parser that requires absolute URLs
-regex_denylist = [
-    "^/logout",
-    "^/signout",
-    "^/exit"
-]
-
 # Regex denylist
-regex_denylist = ["^/logout.*", "^/signout.*"]
+# regex_denylist = ["/deny.*"]
 
 # =============================================================================
 # OUTPUT & LOGGING
