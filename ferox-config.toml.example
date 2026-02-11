@@ -17,7 +17,7 @@
 # =============================================================================
 
 # Comprehensive list for bug hunting (success, redirects, auth errors, server errors)
-status_codes = [200, 201, 204, 301, 302, 307, 308, 401, 403, 405, 500]
+status_codes = [200, 201, 204, 401, 403, 405, 500]
 
 # Filter out 404 Not Found to reduce noise
 filter_status = [404, 429, 503]
@@ -121,7 +121,7 @@ depth = 4
 force_recursion = false
 
 # Extract links from HTML/JS responses
-extract_links = true
+extract_links = false
 
 # Add trailing slash to directories
 add_slash = true
@@ -134,20 +134,27 @@ add_slash = true
 filter_size = [216, 273, 556, 1234, 1337, 16000]
 
 # Filter by word count
-# filter_word_count = [0, 1, 2, 3, 4, 5]
+filter_word_count = [0, 1, 2, 3, 4, 5]
 
 # Filter similar pages (anti-soft-404)
 filter_similar = true
 
 # Filter by regex pattern
-# filter_regex = ["404 Not Found", "Page Not Found"]
+filter_regex = [
+  "404 Not Found",
+  "Page Not Found",
+  "page you requested",
+  "does not exist",
+  "not found on this server"
+]
+
 
 # =============================================================================
 # HTTP METHODS
 # =============================================================================
 
 # HTTP methods to test
-methods = ["GET", "POST"]
+methods = ["GET"]
 
 # =============================================================================
 # REDIRECTS & SSL
@@ -188,7 +195,7 @@ time_limit = "0"
 scan_dir_listings = true
 
 # Show unique responses only
-unique = false
+unique = true
 
 # Response size limit (4MB)
 response_size_limit = 4194304
