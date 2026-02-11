@@ -136,9 +136,6 @@ filter_size = [216, 273, 556, 1234, 1337, 16000]
 # Filter by word count
 filter_word_count = [0, 1, 2, 3, 4, 5]
 
-# Filter similar pages (anti-soft-404)
-filter_similar = true
-
 # Filter by regex pattern
 filter_regex = [
   "404 Not Found",
@@ -252,3 +249,4 @@ Sec-Fetch-Dest = "document"
 Sec-Fetch-Mode = "navigate"
 Sec-Fetch-Site = "none"
 DNT = "1"
+threads = "BREAK"
