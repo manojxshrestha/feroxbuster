@@ -102,7 +102,21 @@ There are quite a few other [installation methods](https://epi052.github.io/fero
 
 #### Kali 
 
-If you're using kali, this is the preferred install method. Installing from the repos adds a [**ferox-config.toml**](https://epi052.github.io/feroxbuster-docs/configuration/ferox-config-toml/) in `cd /usr/local/bin/` or  `/etc/feroxbuster/`, adds command completion for bash, fish, and zsh, includes a man page entry, and installs `feroxbuster` itself. 
+If you're using kali, this is the preferred install method. Installing from the repos adds a [**ferox-config.toml**](https://epi052.github.io/feroxbuster-docs/configuration/ferox-config-toml/) in `/etc/feroxbuster/`, adds command completion for bash, fish, and zsh, includes a man page entry, and installs `feroxbuster` itself. 
+
+## Feroxbuster config location (WSL/Linux)
+
+```
+mkdir -p ~/.config/feroxbuster
+```
+```
+nano ~/.config/feroxbuster/ferox-config.toml
+```
+
+`Verify Ferox is reading the config`
+```
+feroxbuster --print-config
+```
 
 ```
 sudo apt update && sudo apt install -y feroxbuster
