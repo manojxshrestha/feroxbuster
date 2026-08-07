@@ -1,3 +1,9 @@
+# Create the directory
+# mkdir -p ~/.config/feroxbuster
+
+# Create the config file
+# nano ~/.config/feroxbuster/ferox-config.toml
+
 # Example configuration for feroxbuster
 #
 # If you wish to provide persistent settings to feroxbuster, rename this file to ferox-config.toml and make sure
